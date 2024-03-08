@@ -1,1 +1,1 @@
-# Monitoraggio-Fitness by Biasiolo & Dalla Valeria
+# FitHit by Biasiolo & Dalla Valeria
