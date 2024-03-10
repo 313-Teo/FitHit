@@ -31,7 +31,6 @@ class RegisterActivity : AppCompatActivity() {
     private var selectedRadioButton: RadioButton? = null
 
     private lateinit var registerButton: Button
-
     private lateinit var resultText: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -124,10 +123,10 @@ class RegisterActivity : AppCompatActivity() {
                 resultText.text = message
 
                 Handler(Looper.getMainLooper()).postDelayed({
-                    val intent = Intent(this, MainActivity::class.java)
+                    val intent = Intent(this, LoginActivity::class.java)
                     startActivity(intent)
                     finish()
-                }, 5000)
+                }, 3000)
             },
             { error ->
                 val errorData = String(error.networkResponse.data)
@@ -145,7 +144,5 @@ class RegisterActivity : AppCompatActivity() {
         radioButton.isChecked = true
         selectedRadioButton = radioButton
     }
-
-
 
 }

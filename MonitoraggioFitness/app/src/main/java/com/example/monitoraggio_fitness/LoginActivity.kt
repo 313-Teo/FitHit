@@ -59,12 +59,10 @@ class LoginActivity : AppCompatActivity() {
                     saveToken(token)
 
                     if (account == "Atleta") {
-                        val intent = Intent(this, MainActivity::class.java)
-                        intent.putExtra("token", token)
+                        val intent = Intent(this, HomeAthleteActivity::class.java)
                         startActivity(intent)
                     } else if (account == "Trainer") {
-                        val intent = Intent(this, MainActivity::class.java)
-                        intent.putExtra("token", token)
+                        val intent = Intent(this, HomeTrainerActivity::class.java)
                         startActivity(intent)
                     } else {
                         resultText.text = "Tipo di account non supportato"

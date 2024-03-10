@@ -15,7 +15,9 @@ class CardActivity : AppCompatActivity() {
     private lateinit var workout1Text: TextView
     private lateinit var workout2Text: TextView
     private lateinit var workout3Text: TextView
-    private lateinit var imageButton: ImageButton
+    private lateinit var exitButton: ImageButton
+
+    private lateinit var account: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,12 +27,7 @@ class CardActivity : AppCompatActivity() {
         workout1Text = findViewById(R.id.workout1)
         workout2Text = findViewById(R.id.workout2)
         workout3Text = findViewById(R.id.workout3)
-        imageButton = findViewById(R.id.indietro)
-
-        imageButton.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
-        }
+        exitButton = findViewById(R.id.indietro)
 
         val url = getString(R.string.url) + "card"
 
@@ -49,6 +46,7 @@ class CardActivity : AppCompatActivity() {
                     val workout1 = response.getString("workout1")
                     val workout2 = response.getString("workout2")
                     val workout3 = response.getString("workout3")
+                    account = response.getString("account")
 
                     nomecognomeText.text = nome + " " + cognome
                     workout1Text.text = workout1
@@ -68,6 +66,16 @@ class CardActivity : AppCompatActivity() {
         }
 
         Volley.newRequestQueue(this).add(request)
+
+        exitButton.setOnClickListener {
+            if (account == "Atleta") {
+                val intent = Intent(this, HomeAthleteActivity::class.java)
+                startActivity(intent)
+            } else if (account == "Trainer") {
+                val intent = Intent(this, HomeTrainerActivity::class.java)
+                startActivity(intent)
+            }
+        }
 
     }
 

@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="top"
+    android:background="@drawable/home_background"
+    tools:context=".HomeTrainerActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/impostazioni"
+            android:layout_width="65dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:clickable="true"
+            android:background="@drawable/settings">
+        </ImageButton>
+
+        <Space
+            android:layout_width="240dp"
+            android:layout_height="80dp">
+        </Space>
+
+        <ImageButton
+            android:id="@+id/profilo"
+            android:layout_width="65dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="0dp"
+            android:clickable="true"
+            android:background="@drawable/profilo1">
+        </ImageButton>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/buongiorno"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="30dp"
+        android:text="Buongiorno, Trainer"
+        android:textColor="@color/black"
+        android:textSize="45sp"
+        android:textStyle="italic" />
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="500dp"
+        android:layout_height="650dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/orange_linearlayout"
+        app:cardCornerRadius="50dp"
+        app:cardElevation="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="650dp"
+            android:orientation="vertical"
+            android:background="@drawable/orange_linearlayout">
+
+            <LinearLayout
+                android:id="@+id/creaWorkout"
+                android:layout_width="375dp"
+                android:layout_height="150dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="50dp"
+                android:orientation="vertical"
+                android:clickable="true"
+                android:background="@drawable/white_linearlayout"
+                android:layout_marginBottom="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/creaWorkoutText"
+                        android:layout_width="150dp"
+                        android:layout_height="130dp"
+                        android:padding="8dp"
+                        android:text="CREA WORKOUT"
+                        android:layout_marginLeft="30dp"
+                        android:textAlignment="center"
+                        android:textSize="25sp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:gravity="center_vertical|center_horizontal">
+                    </TextView>
+
+                    <Space
+                        android:layout_width="5dp"
+                        android:layout_height="20dp">
+                    </Space>
+
+                    <ImageButton
+                        android:id="@+id/crea"
+                        android:layout_width="190dp"
+                        android:layout_height="110dp"
+                        android:layout_marginTop="10dp"
+                        android:clickable="true"
+                        android:background="@drawable/crea">
+                    </ImageButton>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/atleti"
+                android:layout_width="375dp"
+                android:layout_height="150dp"
+                android:layout_marginLeft="18dp"
+                android:orientation="vertical"
+                android:background="@drawable/white_linearlayout"
+                android:layout_marginBottom="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/atletiText"
+                        android:layout_width="150dp"
+                        android:layout_height="130dp"
+                        android:padding="8dp"
+                        android:text="I TUOI ATLETI"
+                        android:layout_marginLeft="30dp"
+                        android:textAlignment="center"
+                        android:textSize="25sp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:gravity="center_vertical|center_horizontal">
+                    </TextView>
+
+                    <Space
+                        android:layout_width="20dp"
+                        android:layout_height="20dp">
+                    </Space>
+
+                    <ImageButton
+                        android:id="@+id/atleta"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:clickable="true"
+                        android:background="@drawable/atleta">
+                    </ImageButton>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/statistiche"
+                android:layout_width="375dp"
+                android:layout_height="150dp"
+                android:layout_marginLeft="18dp"
+                android:orientation="vertical"
+                android:clickable="true"
+                android:background="@drawable/white_linearlayout"
+                android:layout_marginBottom="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/statisticheText"
+                        android:layout_width="180dp"
+                        android:layout_height="130dp"
+                        android:padding="8dp"
+                        android:text="STATISTICHE ATLETI"
+                        android:layout_marginLeft="20dp"
+                        android:textAlignment="center"
+                        android:textSize="25sp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:gravity="center_vertical|center_horizontal">
+                    </TextView>
+
+                    <Space
+                        android:layout_width="20dp"
+                        android:layout_height="20dp">
+                    </Space>
+
+                    <ImageButton
+                        android:id="@+id/stats"
+                        android:layout_width="110dp"
+                        android:layout_height="110dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/stats">
+                    </ImageButton>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

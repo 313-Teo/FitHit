@@ -18,7 +18,9 @@ class ProfileActivity : AppCompatActivity() {
     private lateinit var altezzaText: TextView
     private lateinit var accountText: TextView
     private lateinit var codiceText: TextView
-    private lateinit var imageButton: ImageButton
+    private lateinit var exitButton: ImageButton
+
+    private lateinit var account: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,12 +32,7 @@ class ProfileActivity : AppCompatActivity() {
         altezzaText = findViewById(R.id.altezza)
         accountText = findViewById(R.id.account)
         codiceText = findViewById(R.id.codice)
-        imageButton = findViewById(R.id.indietro)
-
-        imageButton.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
-        }
+        exitButton = findViewById(R.id.indietro)
 
         val url = getString(R.string.url) + "profile"
 
@@ -53,7 +50,7 @@ class ProfileActivity : AppCompatActivity() {
                     val cognome = response.getString("cognome")
                     val peso = response.getDouble("peso")
                     val altezza = response.getDouble("altezza")
-                    val account = response.getString("account")
+                    account = response.getString("account")
                     val codice = response.getString("codice")
 
                     nomeText.text = nome
@@ -76,6 +73,16 @@ class ProfileActivity : AppCompatActivity() {
         }
 
         Volley.newRequestQueue(this).add(request)
+
+        exitButton.setOnClickListener {
+            if (account == "Atleta") {
+                val intent = Intent(this, HomeAthleteActivity::class.java)
+                startActivity(intent)
+            } else if (account == "Trainer") {
+                val intent = Intent(this, HomeTrainerActivity::class.java)
+                startActivity(intent)
+            }
+        }
 
     }
 

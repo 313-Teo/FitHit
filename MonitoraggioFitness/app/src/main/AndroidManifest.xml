@@ -18,6 +18,12 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".HomeTrainerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HomeAthleteActivity"
+            android:exported="false" />
+        <activity
             android:name=".CardActivity"
             android:exported="false" />
         <activity

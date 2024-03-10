@@ -9,13 +9,10 @@ import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var textView: TextView
-
     private lateinit var loginButton: Button
     private lateinit var registerButton: Button
-    private lateinit var cardButton: Button
-    private lateinit var profileButton: Button
-
+    private lateinit var athleteButton: Button
+    private lateinit var trainerButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,10 +20,8 @@ class MainActivity : AppCompatActivity() {
 
         loginButton = findViewById(R.id.login)
         registerButton = findViewById(R.id.register)
-        cardButton = findViewById(R.id.card)
-        profileButton = findViewById(R.id.profile)
-
-        textView = findViewById(R.id.textView)
+        athleteButton = findViewById(R.id.atleta)
+        trainerButton = findViewById(R.id.trainer)
 
         loginButton.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)
@@ -38,18 +33,13 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        cardButton.setOnClickListener {
-            val intent = Intent(this, CardActivity::class.java)
+        athleteButton.setOnClickListener {
+            val intent = Intent(this, HomeAthleteActivity::class.java)
             startActivity(intent)
         }
 
-        profileButton.setOnClickListener {
-            val intent = Intent(this, ProfileActivity::class.java)
-            startActivity(intent)
-        }
-
-        profileButton.setOnClickListener {
-            val intent = Intent(this, ProfileActivity::class.java)
+        trainerButton.setOnClickListener {
+            val intent = Intent(this, HomeTrainerActivity::class.java)
             startActivity(intent)
         }
 
