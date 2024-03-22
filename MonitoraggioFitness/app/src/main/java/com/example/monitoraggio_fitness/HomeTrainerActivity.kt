@@ -53,12 +53,12 @@ class HomeTrainerActivity : AppCompatActivity() {
         }
 
         creaWorkout.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, CreateWorkoutActivity::class.java)
             startActivity(intent)
         }
 
         atleti.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, MyAthletesActivity::class.java)
             startActivity(intent)
         }
 
@@ -68,12 +68,12 @@ class HomeTrainerActivity : AppCompatActivity() {
         }
 
         creaButton.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, CreateWorkoutActivity::class.java)
             startActivity(intent)
         }
 
         atletaButton.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, MyAthletesActivity::class.java)
             startActivity(intent)
         }
 
@@ -93,11 +93,8 @@ class HomeTrainerActivity : AppCompatActivity() {
         val request = object : JsonObjectRequest(
             Request.Method.GET, url, null,
             { response ->
-                try {
-                    nome = response.getString("nome")
-                    buongiorno(nome)
-                } catch (e: Exception) {
-                }
+                nome = response.getString("nome")
+                buongiorno(nome)
             },
             { error ->
             }) {

@@ -45,24 +45,19 @@ class ProfileActivity : AppCompatActivity() {
         val request = object : JsonObjectRequest(
             Request.Method.GET, url, null,
             { response ->
-                try {
-                    val nome = response.getString("nome")
-                    val cognome = response.getString("cognome")
-                    val peso = response.getDouble("peso")
-                    val altezza = response.getDouble("altezza")
-                    account = response.getString("account")
-                    val codice = response.getString("codice")
+                val nome = response.getString("nome")
+                val cognome = response.getString("cognome")
+                val peso = response.getDouble("peso")
+                val altezza = response.getDouble("altezza")
+                account = response.getString("account")
+                val codice = response.getString("codice")
 
-                    nomeText.text = nome
-                    cognomeText.text = cognome
-                    pesoText.text = "$peso Kg"
-                    altezzaText.text = "$altezza cm"
-                    accountText.text = account
-                    codiceText.text = codice
-
-                } catch (e: Exception) {
-                    Error()
-                }
+                nomeText.text = nome
+                cognomeText.text = cognome
+                pesoText.text = "$peso Kg"
+                altezzaText.text = "$altezza cm"
+                accountText.text = account
+                codiceText.text = codice
             },
             { error ->
                 Error()

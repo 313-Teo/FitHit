@@ -39,6 +39,20 @@
             android:orientation="vertical"
             android:padding="24dp">
 
+            <TextView
+                android:id="@+id/dev"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/custom_edittext"
+                android:drawablePadding="8dp"
+                android:text="DEV"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textColorHighlight="@color/cardview_dark_background" />
+
             <Button
                 android:id="@+id/login"
                 android:layout_width="match_parent"

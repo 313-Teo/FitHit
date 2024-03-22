@@ -35,7 +35,7 @@
                 android:layout_height="wrap_content"
                 android:text="LOGIN"
                 android:textAlignment="center"
-                android:textColor="@color/orange"
+                android:textColor="@color/black"
                 android:textSize="36sp"
                 android:textStyle="bold" />
 
@@ -97,7 +97,7 @@
             android:text="Non sei registrato?"
             android:layout_marginLeft="90dp"
             android:textSize="15sp"
-            android:textColor="@color/orange"
+            android:textColor="@color/black"
             android:textStyle="italic"/>
 
         <TextView

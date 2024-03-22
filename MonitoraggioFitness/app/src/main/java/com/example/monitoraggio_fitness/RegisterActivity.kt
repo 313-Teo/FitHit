@@ -119,7 +119,7 @@ class RegisterActivity : AppCompatActivity() {
         val request = JsonObjectRequest(
             Request.Method.POST, url, jsonParams,
             { response ->
-                val message = response.optString("message")
+                val message = response.getString("message")
                 resultText.text = message
 
                 Handler(Looper.getMainLooper()).postDelayed({
@@ -131,7 +131,7 @@ class RegisterActivity : AppCompatActivity() {
             { error ->
                 val errorData = String(error.networkResponse.data)
                 val jsonError = JSONObject(errorData)
-                val errorMessage = jsonError.optString("error")
+                val errorMessage = jsonError.getString("error")
                 resultText.text = errorMessage
             }
         )

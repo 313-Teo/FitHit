@@ -52,8 +52,8 @@ class LoginActivity : AppCompatActivity() {
         val request = JsonObjectRequest(
             Request.Method.POST, url, jsonParams,
             { response ->
-                val token = response.optString("token")
-                val account = response.optString("account")
+                val token = response.getString("token")
+                val account = response.getString("account")
 
                 if (token.isNotEmpty()) {
                     saveToken(token)
@@ -74,7 +74,7 @@ class LoginActivity : AppCompatActivity() {
             { error ->
                 val errorData = String(error.networkResponse.data)
                 val jsonError = JSONObject(errorData)
-                val errorMessage = jsonError.optString("error")
+                val errorMessage = jsonError.getString("error")
                 resultText.text = errorMessage
             }
         )
@@ -88,11 +88,6 @@ class LoginActivity : AppCompatActivity() {
         val editor = sharedPreferences.edit()
         editor.putString("token", token)
         editor.apply()
-    }
-
-    private fun retrieveToken(): String {
-        val sharedPreferences = getSharedPreferences("token", MODE_PRIVATE)
-        return sharedPreferences.getString("token", "") ?: ""
     }
 
     private fun logoutUser() {

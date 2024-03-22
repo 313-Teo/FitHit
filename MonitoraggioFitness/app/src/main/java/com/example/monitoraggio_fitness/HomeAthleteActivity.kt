@@ -53,7 +53,7 @@ class HomeAthleteActivity : AppCompatActivity() {
         }
 
         nuovoWorkout.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, NewWorkoutActivity::class.java)
             startActivity(intent)
         }
 
@@ -68,7 +68,7 @@ class HomeAthleteActivity : AppCompatActivity() {
         }
 
         workoutButton.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, NewWorkoutActivity::class.java)
             startActivity(intent)
         }
 
@@ -93,11 +93,8 @@ class HomeAthleteActivity : AppCompatActivity() {
         val request = object : JsonObjectRequest(
             Request.Method.GET, url, null,
             { response ->
-                try {
-                    nome = response.getString("nome")
-                    buongiorno(nome)
-                } catch (e: Exception) {
-                }
+                nome = response.getString("nome")
+                buongiorno(nome)
             },
             { error ->
             }) {
