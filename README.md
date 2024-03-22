@@ -6,7 +6,7 @@ WebService: https://github.com/313-Teo/FitnessWebService
 Funzionalità implementate: 
 Login, Register, Home (Atleta e Trainer), Profilo Utente, 
 Scheda Atleta (Atleta), Nuovo Workout (Atleta), Workout Preview (Atleta)
-Crea nuovo Workout (Trainer), I tuoi atleti (Trainer)
+Crea Nuovo Workout (Trainer), I Tuoi Atleti (Trainer)
 
 Implementata anche una pagina DEV nel MainActivity.kt per velocizzare i test dell'app, 
 terminato il development sarà l'open page dell'app.
