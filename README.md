@@ -19,11 +19,13 @@ Atleta: email: biasi@email.com pw:1234
 
 Trainer: email: dalla@email.com pw:5678
 
--
+-O-
 
 Istruzioni di installazione:
 
 Scaricare il progetto per Android Studio, il Web Service (link della repo in alto) e il database FitHit.sql sempre nella repo del Web Service
+
+-
 
 -WEBSERVICE:
 
