@@ -43,3 +43,6 @@ Cambiare l'indirizzo IP in string.xml con il proprio indirizzo IP locale
 
 Aggiungere un Pixel 4XL API 33 con l'implementazione di Tiramisù
 
+Avviare l'emulatore e avviare l'app 
+
+
