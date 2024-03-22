@@ -16,6 +16,7 @@ Funzionalità presenti ma non implementate: Impostazioni, Statistiche, Inizia Wo
 Utenti con dati già presenti nel database per testare l'app:
 
 Atleta: email: biasi@email.com pw:1234
+
 Trainer: email dalla@email.com pw:5678
 
 Cambiare l'indirizzo IP in string.xml con il proprio indirizzo IP locale
