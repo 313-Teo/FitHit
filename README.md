@@ -14,6 +14,7 @@ terminato il development sarà l'open page dell'app.
 Funzionalità presenti ma non implementate: Impostazioni, Statistiche, Inizia Workout
 
 Utenti con dati già presenti nel database per testare l'app:
+
 Atleta: email: biasi@email.com pw:1234
 Trainer: email dalla@email.com pw:5678
 
